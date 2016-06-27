@@ -1,0 +1,18 @@
+{
+  "name": "forYandex",
+  "version": "0.0.0",
+  "description": "Задание для яндекс школы",
+  "author": "Ann Serba",
+  "scripts": {},
+  "devDependencies": {
+    "admin-lte":"2.3.3",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.0.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-watch": "^4.3.5",
+    "node-font-awesome": "^1.0.2",
+    "tiny-lr": "^0.2.1"
+  }
+}

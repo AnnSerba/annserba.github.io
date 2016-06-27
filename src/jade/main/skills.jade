@@ -1,0 +1,17 @@
+h1.text-center Skills
+.box.box-solid
+    .box-body
+        .container
+            #carousel-example-generic.carousel.slide(data-ride="carousel")
+                ol.carousel-indicators
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="0")
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="1").active
+                .carousel-inner
+                    .item.active
+                        img.center-block(src="dest/img/htmlcssjs.png" alt="html css js")
+                    .item
+                        img.center-block(src="dest/img/AngularJS.png" alt="AnjularJS")
+                a.left.carousel-control(href="#carousel-example-generic" data-slide="prev")
+                    span.fa.fa-angle-left
+                a.right.carousel-control(href="#carousel-example-generic" data-slide="next")
+                    span.fa.fa-angle-right
