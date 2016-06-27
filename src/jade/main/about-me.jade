@@ -1,0 +1,53 @@
+h1.text-center About me
+.col-xs-4
+    .box.box-default
+        .box-body.box-profile
+            img.profile-user-img.img-responsive.img-circle(src="dest/img/myPhoto.png")
+            h2.profile-username.text-center Ann Serba
+            p.text-muted.text-center Software Engineer
+            strong
+                i.fa.fa-pencil.margin-r-5
+                |  Skills
+            ul
+                li.label.label-danger Html
+                li.label.label-warning JS
+                li.label.label-info Css
+                li.label.label-primary Node.js
+                li.label.label-success Angular
+                li.label.label-default C#
+.col-xs-8
+    .nav-tabs-custom
+        ul.nav.nav-tabs
+            li.active
+                a(href='#contacts', data-toggle='tab') Contacts
+            li
+                a(href='#photo', data-toggle='tab') Photo
+
+        .tab-content
+            #contacts.active.tab-pane
+                p
+                    i.fa.fa-map-marker  live in
+                    a(href="https://yandex.ru/maps/959/sevastopol/")  Russia, Sevestopol
+                p
+                    i.fa.fa-envelope-o  e-mail: annserba94@gmail.com
+                a.btn.btn-github.margin(href="https://github.com/AnnSerba")
+                    i.fa.fa-github  GitHub
+                a.btn.btn-vk.margin(href="https://vk.com/annserba")
+                    i.fa.fa-vk  VK
+                a.btn.btn-facebook.margin(href="https://www.facebook.com/anyserba")
+                    i.fa.fa-facebook  Facebook
+            #photo.tab-pane
+                .row.margin-bottom
+                    .col-sm-6
+                        img.img-responsive(src='https://pp.vk.me/c630230/v630230957/4a903/hyU0hAhkL7E.jpg', alt='Photo')
+                    .col-sm-6
+                        .row
+                            .col-sm-6
+                                img.img-responsive(src='https://pp.vk.me/c628316/v628316957/1773/XxruwMOmt38.jpg', alt='Photo')
+                                br
+                                img.img-responsive(src='https://pp.vk.me/c411730/v411730957/5ba9/_pertYHhylc.jpg', alt='Photo')
+                            .col-sm-6
+                                img.img-responsive(src='https://pp.vk.me/c5312/v5312957/82a/VidrbhH6qRQ.jpg', alt='Photo')
+
+
+
