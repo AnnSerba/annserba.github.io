@@ -10,49 +10,26 @@ var gulp        = require('gulp'),
         src: './src',
         dest: './dest',
         root: '.',
-        bootstrap:'node_modules/admin-lte/bootstrap/',
-        adminLTE:'node_modules/admin-lte/dist/',
-        plugins:'node_modules/admin-lte/plugins/'
+        css:[
+            'node_modules/admin-lte/bootstrap/css/bootstrap.min.css',
+            'node_modules/admin-lte/dist/css/AdminLTE.min.css',
+            'node_modules/admin-lte/dist/css/skins/_all-skins.min.css'
+        ],
+        js:[
+            'node_modules/admin-lte/bootstrap/js/bootstrap.min.js',
+            'node_modules/admin-lte/dist/js/app.min.js',
+            'node_modules/admin-lte/plugins/jQuery/jQuery-2.2.0.min.js',
+            'node_modules/admin-lte/plugins/jQueryUI/jQuery-ui.min.js'
+        ],
     };
 
-gulp.task('less',function(){
-    gulp.src(paths.src+'/less/*.less')
-        .pipe(less())
-        .pipe(debug({ title: '*.less files changed' }))
-        .pipe(gulp.dest(paths.dest+'/css'))
-        .pipe(livereload(server));
-});
-gulp.task('copy-jquery',function(){
-    gulp.src(paths.plugins+'jQuery/jQuery-2.2.0.min.js')
-        .pipe(debug({ title: '*.js files copy' } ))
-        .pipe(gulp.dest(paths.dest+'/js'))
-        .pipe(livereload(server));
-    gulp.src(paths.plugins+'jQueryUI/jQuery-ui.min.js')
-        .pipe(debug({ title: '*.js files copy' } ))
-        .pipe(gulp.dest(paths.dest+'/js'))
-        .pipe(livereload(server));
-});
-gulp.task('copy-bootstrap',function(){
-    gulp.src(paths.bootstrap+'css/bootstrap.min.css')
-        .pipe(debug({ title: '*.css files copy' } ))
-        .pipe(gulp.dest(paths.dest+'/css'))
-        .pipe(livereload(server));
-    gulp.src(paths.bootstrap+'js/bootstrap.min.js')
-        .pipe(debug({ title: '*.js files copy' } ))
-        .pipe(gulp.dest(paths.dest+'/js'))
-        .pipe(livereload(server));
-});
 
-gulp.task('copy-adminLTE',function(){
-    gulp.src(paths.adminLTE+'css/AdminLTE.min.css')
+gulp.task('copy',function(){
+    gulp.src(paths.css)
         .pipe(debug({ title: '*.css files copy' } ))
         .pipe(gulp.dest(paths.dest+'/css'))
         .pipe(livereload(server));
-    gulp.src(paths.adminLTE+'css/skins/_all-skins.min.css')
-        .pipe(debug({ title: '*.css files copy' } ))
-        .pipe(gulp.dest(paths.dest+'/css'))
-        .pipe(livereload(server));
-    gulp.src(paths.adminLTE+'js/app.min.js')
+    gulp.src(paths.js)
         .pipe(debug({ title: '*.js files copy' } ))
         .pipe(gulp.dest(paths.dest+'/js'))
         .pipe(livereload(server));
@@ -70,11 +47,15 @@ gulp.task('jade', function() {
         .pipe(gulp.dest(paths.dest+'/pages/'))
         .pipe(livereload(server));
 });
+gulp.task('less',function(){
+    gulp.src(paths.src+'/less/*.less')
+        .pipe(less())
+        .pipe(debug({ title: '*.less files changed' }))
+        .pipe(gulp.dest(paths.dest+'/css'))
+        .pipe(livereload(server));
+});
 
 gulp.task('watch', function () {
-    gulp.watch(paths.plugins+'jQuery/jQuery-2.2.0.min.js', ['copy-jquery']);
-    gulp.watch(paths.bootstrap+'css/bootstrap.min.css', ['copy-bootstrap']);
-    gulp.watch(paths.adminLTE+'css/AdminLTE.min.css',['copy-adminLTE']);
     server.listen(35729, function (err) {
         if (err) { return console.log(err); }
         gulp.watch(paths.src+'/less/*.less', ['less']);
@@ -83,4 +64,4 @@ gulp.task('watch', function () {
     });
 });
 
-gulp.task('default', ['copy-jquery','copy-bootstrap','copy-adminLTE','jade','less','watch']);
+gulp.task('default', ['copy','jade','less','watch']);
