@@ -13,7 +13,7 @@ var gulp        = require('gulp'),
         css:[
             'node_modules/admin-lte/bootstrap/css/bootstrap.min.css',
             'node_modules/admin-lte/dist/css/AdminLTE.min.css',
-            'node_modules/admin-lte/dist/css/skins/_all-skins.min.css'
+            'node_modules/admin-lte/dist/css/skins/skin-yellow-light.min.css'
         ],
         js:[
             'node_modules/admin-lte/bootstrap/js/bootstrap.min.js',
