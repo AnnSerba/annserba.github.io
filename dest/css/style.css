@@ -11,8 +11,7 @@ textarea {
   resize: vertical;
 }
 .bootstrap-datetimepicker-widget table td.active,
-.bootstrap-datetimepicker-widget table td.active:hover,
-.bootstrap-datetimepicker-widget table td.today:before {
+.bootstrap-datetimepicker-widget table td.active:hover {
   background-color: #3c8dbc;
 }
 .bootstrap-datetimepicker-widget table td,
