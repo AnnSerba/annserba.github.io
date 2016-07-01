@@ -2,11 +2,97 @@
 <html>
   <head>
     <title>AnnSerba</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../css/fileInput.css"/>
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/AdminLTE.min.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="../css/skin-yellow-light.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
   </head>
   <body class="container">
-    <div class="box box-solid"></div>
+    <div class="content">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="box box-solid box-primary">
+          <div class="box-header text-center">
+            <h1 class="box-title">Размещение заказа</h1>
+          </div>
+          <div class="box-body">
+            <form class="form-horizontal">
+              <div class="form-group col-xs-12">
+                <label class="control-label col-xs-3">Услуги</label>
+                <div class="col-xs-9">
+                  <select class="form-control">
+                    <option>услуга 1</option>
+                    <option>услуга 2</option>
+                    <option>услуга 3</option>
+                    <option>услуга 4</option>
+                    <option>услуга 5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group col-xs-12">
+                <label class="control-label col-xs-3">Ожидаемый срок</label>
+                <div class="col-xs-9">
+                  <div id="datetimepicker12"></div>
+                </div>
+              </div>
+              <div class="form-group col-xs-12">
+                <label class="control-label col-xs-3">Примечание</label>
+                <div class="col-xs-9">
+                  <input class="form-control"/>
+                </div>
+              </div>
+              <div class="form-group col-xs-12">
+                <label class="control-label col-xs-3">Файл</label>
+                <div class="col-xs-9">
+                  <div class="file-control">
+                    <div data-text="Выберите файл" class="file-upload">
+                      <input type="file"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xs-12">
+                <label class="control-label col-xs-3">Текст</label>
+                <div class="col-xs-9">
+                  <textarea rows="3" placeholder="" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="form-group col-xs-12">
+                <div class="btn pull-right btn-success margin">Создать</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+<script src="../js/jQuery-2.2.0.min.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/moment-with-locales.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+      $('#datetimepicker12').datetimepicker({
+          inline: true,
+          sideBySide: true,
+          locale: 'ru',
+          icons: {
+              time: "fa fa-clock-o",
+              date: "fa fa-calendar",
+              up: "fa fa-arrow-up",
+              down: "fa fa-arrow-down",
+              previous: 'fa fa-chevron-left',
+              next: 'fa fa-chevron-right',
+              today: 'fa fa-screenshot',
+              clear: 'fa fa-trash',
+              close: 'fa fa-remove'
+          }
+      });
+  });
+</script>

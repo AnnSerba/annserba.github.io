@@ -1,8 +1,12 @@
 html,
 body {
   background: #f0f0f0;
+  min-width: 500px;
 }
 .img-portfolio {
   height: 170px;
   width: auto;
+}
+textarea {
+  resize: vertical;
 }

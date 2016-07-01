@@ -13,13 +13,17 @@ var gulp        = require('gulp'),
         css:[
             'node_modules/admin-lte/bootstrap/css/bootstrap.min.css',
             'node_modules/admin-lte/dist/css/AdminLTE.min.css',
-            'node_modules/admin-lte/dist/css/skins/skin-yellow-light.min.css'
+            'node_modules/admin-lte/dist/css/skins/skin-yellow-light.min.css',
+            'bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
         ],
         js:[
             'node_modules/admin-lte/bootstrap/js/bootstrap.min.js',
             'node_modules/admin-lte/dist/js/app.min.js',
             'node_modules/admin-lte/plugins/jQuery/jQuery-2.2.0.min.js',
-            'node_modules/admin-lte/plugins/jQueryUI/jQuery-ui.min.js'
+            'node_modules/admin-lte/plugins/jQueryUI/jQuery-ui.min.js',
+            'bower_components/moment/min/moment.min.js',
+            'bower_components/moment/min/moment-with-locales.min.js',
+            'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
         ],
     };
 
