@@ -19,7 +19,7 @@
   right: 0;
   z-index: 5;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #d2d6de;
   border-radius: 0 1px 1px 0;
   padding: 6px 12px;
   color: #333;
@@ -27,7 +27,7 @@
 .file-upload:hover:after {
   color: #333;
   background-color: #e6e6e6;
-  border-color: #adadad;
+  border-color: #d2d6de;
 }
 .file-upload:active:after {
   outline: 0;
@@ -44,7 +44,7 @@
   width: 100%;
   padding: 6px 12px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #d2d6de;
   border-radius: 1px;
 }
 .file-upload input {
