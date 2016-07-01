@@ -4,13 +4,28 @@ h1.text-center Skills
         .container
             #carousel-example-generic.carousel.slide(data-ride="carousel")
                 ol.carousel-indicators
-                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="0")
-                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="1").active
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="0").active
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="1")
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="2")
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="3")
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="4")
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="5")
+                    li.bg-yellow(data-target="#carousel-example-generic" data-slide-to="6")
                 .carousel-inner
                     .item.active
-                        img.center-block(src="dest/img/htmlcssjs.png" alt="html css js")
+                        img.center-block(src="dest/img/html-css-js.png" alt="html css js")
+                    .item
+                        img.center-block(src="dest/img/sass-less.png" alt="sass less")
+                    .item
+                        img.center-block(src="dest/img/jade.png" alt="jade")
                     .item
                         img.center-block(src="dest/img/AngularJS.png" alt="AnjularJS")
+                    .item
+                        img.center-block(src="dest/img/gulp-bower-npm.png" alt="gulp bower npm")
+                    .item
+                        img.center-block(src="dest/img/Scrum-Jira-Git.png" alt="Scrum Jira Git")
+                    .item
+                        img.center-block(src="dest/img/webStorm-VS.png" alt="webStorm VS Visual Studio")
                 a.left.carousel-control(href="#carousel-example-generic" data-slide="prev")
                     span.fa.fa-angle-left
                 a.right.carousel-control(href="#carousel-example-generic" data-slide="next")
