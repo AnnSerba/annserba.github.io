@@ -41,7 +41,7 @@ gulp.task('jade', function() {
         .pipe(debug({ title: 'jade: ' }))
         .pipe(gulp.dest(paths.root))
         .pipe(livereload(server));
-    gulp.src(paths.src+'/jade/forYandex.jade')
+    gulp.src(paths.src+'/jade/pages/*.jade')
         .pipe(jade({ pretty: true }))
         .pipe(debug({ title: 'jade: ' }))
         .pipe(gulp.dest(paths.dest+'/pages/'))
