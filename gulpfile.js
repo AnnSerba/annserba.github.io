@@ -64,6 +64,7 @@ gulp.task('watch', function () {
     server.listen(35729, function (err) {
         if (err) { return console.log(err); }
         gulp.watch(paths.src+'/less/*.less', ['less']);
+        gulp.watch(paths.src+'/js/*.js',['copy']);
         gulp.watch(paths.src+'/jade/*.jade',['jade']);
         gulp.watch(paths.src+'/jade/*/*.jade',['jade']);
     });
