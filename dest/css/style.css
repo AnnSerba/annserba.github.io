@@ -19,6 +19,6 @@ textarea {
 .bootstrap-datetimepicker-widget table td span {
   border-radius: 0;
 }
-.nav-tabs-custom ul.nav.nav-tabs li.active {
-  border-top-color: #f39c12;
+ul {
+  padding: 0;
 }

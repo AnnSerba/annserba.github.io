@@ -1,47 +1,12 @@
 h1.text-center About me
-.col-xs-4
-    .box.box-warning
-        .box-body.box-profile
-            img.profile-user-img.img-responsive.img-circle(src="dest/img/myPhoto.png")
-            h2.profile-username.text-center Ann Serba
-            p.text-muted.text-center Software Engineer
-            strong
-                i.fa.fa-pencil.margin-r-5
-                |  Skills
-            ul
-                li.label.label-danger Html
-                li.label.label-warning JS
-                li.label.label-info Css
-                li.label.label-primary less
-                li.label.label-danger Sass
-                li.label.label-success jade
-                li.label.label-info git
-                li.label.label-danger Angular
-                li.label.label-success Node.js
-                li.label.label-default npm
-                li.label.label-danger gulp
-                li.label.label-warning bower
-                li.label.label-primary Scrum
-                li.label.label-success Jira
-                li.label.label-info WebStorm
-                li.label.label-dafault C#
-                li.label.label-primary Visual Studio
-.col-xs-8
-    .nav-tabs-custom
-        ul.nav.nav-tabs
-            li.active
-                a(href='#contacts', data-toggle='tab') Contacts
-            li
-                a(href='#photo', data-toggle='tab') Photo
-
-        .tab-content
-            #contacts.tab-pane.active
-                p Education:
-                    a(href="http://sevsu.ru/") Sevastopol State University
-                p Specialty: information systems
-                p
-                    i.fa.fa-map-marker  live in
-                    a(href="https://yandex.ru/maps/959/sevastopol/")  Russia, Sevastopol
+.row
+    .col-xs-4
+        .box.box-warning
+            .box-body.box-profile
+                img.profile-user-img.img-responsive.img-circle(src="dest/img/myPhoto.png")
+                h2.profile-username.text-center Ann Serba
+                p.text-muted.text-center Front-end and .Net developer
+            .box-footer.text-center
                 p
                     i.fa.fa-envelope-o  e-mail: annserba94@gmail.com
                 a.btn.btn-github.margin(href="https://github.com/AnnSerba")
@@ -50,18 +15,38 @@ h1.text-center About me
                     i.fa.fa-vk  VK
                 a.btn.btn-facebook.margin(href="https://www.facebook.com/anyserba")
                     i.fa.fa-facebook  Facebook
-            #photo.tab-pane
-                .row.margin-bottom
-                    .col-sm-6
-                        img.img-responsive(src='https://pp.vk.me/c630230/v630230957/4a903/hyU0hAhkL7E.jpg', alt='Photo')
-                    .col-sm-6
-                        .row
-                            .col-sm-6
-                                img.img-responsive(src='https://pp.vk.me/c628316/v628316957/1773/XxruwMOmt38.jpg', alt='Photo')
-                                br
-                                img.img-responsive(src='https://pp.vk.me/c411730/v411730957/5ba9/_pertYHhylc.jpg', alt='Photo')
-                            .col-sm-6
-                                img.img-responsive(src='https://pp.vk.me/c5312/v5312957/82a/VidrbhH6qRQ.jpg', alt='Photo')
-
-
-
+    .col-xs-8
+        .box.box-warning
+            .box-body
+                strong
+                    i.fa.fa-book.margin-r-5
+                    |  Education
+                p.margin in Information Systems from
+                    a(href="http://sevsu.ru/")  Sevastopol State University
+                strong
+                    i.fa.fa-pencil.margin-r-5
+                    |  Skills
+                ul.margin
+                    li.label.label-danger Html
+                    li.label.label-warning JS
+                    li.label.label-info Css
+                    li.label.label-primary less
+                    li.label.label-danger Sass
+                    li.label.label-success jade
+                    li.label.label-info git
+                    li.label.label-danger Angular
+                    li.label.label-success Node.js
+                    li.label.label-default npm
+                    li.label.label-danger gulp
+                    li.label.label-warning bower
+                    li.label.label-primary Scrum
+                    li.label.label-success Jira
+                    li.label.label-info WebStorm
+                    li.label.label-default C#
+                    li.label.label-primary Visual Studio
+                strong
+                    i.fa.fa-map-marker.margin-r-5
+                    |  Location
+                p.margin
+                    a(href="https://yandex.ru/maps/959/sevastopol/")  Russia, Sevastopol
+                iframe(src='https://api-maps.yandex.ru/frame/v1/-/CVXO6W~a', width='100%' height='200', frameborder='0')
