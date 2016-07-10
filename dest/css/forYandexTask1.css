@@ -1,0 +1,68 @@
+body {
+  counter-reset: number;
+}
+.point-no-number {
+  background: #f3f8fa;
+  border: 5px solid #87b7ce;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5px auto;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.point-no-number img {
+  border-radius: 50%;
+  width: 66%;
+  height: 66%;
+  z-index: 101;
+}
+.point-number {
+  background: #f7f5f8;
+  border: 5px solid #b09eb7;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5px auto;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.point-number img {
+  border-radius: 50%;
+  width: 66%;
+  height: 66%;
+  z-index: 101;
+}
+.point-number:after {
+  right: -2px;
+  bottom: -2px;
+  width: 40%;
+  height: 40%;
+  border-radius: 100%;
+  position: absolute;
+  color: #b09eb7;
+  background: #f7f5f8;
+  content: counter(number);
+  counter-increment: number;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1em;
+  font-weight: bold;
+}
+.point-number:before {
+  right: -7px;
+  bottom: -7px;
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  position: absolute;
+  border: 5px solid #b09eb7;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: '';
+}

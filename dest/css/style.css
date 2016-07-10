@@ -1,0 +1,28 @@
+html,
+body {
+  background: #f0f0f0;
+  min-width: 500px;
+}
+.img-portfolio {
+  height: 170px;
+  width: auto;
+}
+textarea {
+  resize: vertical;
+}
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background-color: #3c8dbc;
+}
+.bootstrap-datetimepicker-widget table td,
+.bootstrap-datetimepicker-widget table th,
+.bootstrap-datetimepicker-widget table td span {
+  border-radius: 0;
+}
+ul {
+  padding: 0;
+}
+footer {
+  background: #2b2b2b;
+  color: #fff;
+}

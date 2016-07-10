@@ -1,0 +1,65 @@
+body{
+  counter-reset: number;
+}
+.circle(@background,@border){
+  background: @background;
+  border: 5px solid @border;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5px auto;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.circle-img(@background,@border){
+  .circle(@background,@border);
+  img {
+    border-radius: 50%;
+    width: 66%;
+    height: 66%;
+    z-index: 101;
+  }
+}
+
+.circle-number(@offset,@size){
+  right: @offset;
+  bottom: @offset;
+  width: @size;
+  height: @size;
+  border-radius: 100%;
+  position: absolute;
+}
+
+@background-color:#f3f8fa;
+@border-color:#87b7ce;
+@background-color-number:#f7f5f8;
+@border-color-number:#b09eb7;
+
+.point-no-number{
+  .circle-img(@background-color,@border-color);
+}
+
+.point-number {
+  .circle-img(@background-color-number, @border-color-number);
+  &:after {
+    .circle-number(-2px, 40%);
+    color: @border-color-number;
+    background: @background-color-number;
+    content: counter(number);
+    counter-increment: number;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  &:before {
+    .circle-number(-7px, 50%);
+    border: 5px solid @border-color-number;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: '';
+  }
+}
